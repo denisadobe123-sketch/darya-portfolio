@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Дарья — графический дизайнер: постеры, реклама, SMM, айдентика и презентации.">
+<meta name="theme-color" content="#F8E8EC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Дарья — графический дизайнер">
+<meta property="og:description" content="Постеры, реклама, карточки для маркетплейсов, айдентика и презентации.">
+<meta property="og:url" content="https://denisadobe123-sketch.github.io/darya-portfolio/">
+<meta property="og:image" content="https://denisadobe123-sketch.github.io/darya-portfolio/img/pony.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='12' fill='%232C1822'/%3E%3Ctext x='19.5' y='29.5' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='600' font-size='30' fill='%23F8E8EC'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/unbounded-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>body{margin:0}</style>
+<title>Портфолио Дарьи</title>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+<style>
+:root{
+  color-scheme:light;
+  /* keep content clear of the phone's status bar / viewer header; the sticky nav relies on this */
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F8E8EC; --paper:#FFF5F7; --blush:#F2D2DB; --rose:#E6A0B4;
+  --ink:#2C1822; --ink2:#4A2E3B; --muted:#7E5967; --accent:#CC4277; --accent-ink:#FFF5F7;
+  --line:rgba(44,24,34,.14); --line-soft:rgba(44,24,34,.08);
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --serif:"Cormorant Garamond","Georgia",serif;
+  --body:"Onest","Segoe UI",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg);overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .35 0 0 0 0 .42 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+[hidden]{display:none!important}
+:root:not([data-lang="en"]) .en{display:none!important}
+:root[data-lang="en"] .ru{display:none!important}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+.eyebrow{font:500 11px/1.2 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.serif{font-family:var(--serif);font-style:italic;font-weight:500}
+h2{font:600 clamp(30px,5vw,64px)/1.02 var(--display);letter-spacing:-.035em;margin:14px 0 0;text-wrap:balance}
+h2 .serif{font-weight:500;letter-spacing:-.01em;color:var(--accent);font-size:1.08em}
+section{padding-block:clamp(72px,10vw,140px)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(248,232,236,.86);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:40px;height:40px;flex:none;transition:transform .6s var(--ease)}
+.brand:hover svg{transform:rotate(-12deg)}
+.brand .nm{display:flex;flex-direction:column;line-height:1.05}
+.brand .nm b{font:600 15px var(--display);letter-spacing:-.02em}
+.brand .nm small{font:italic 500 15px var(--serif);color:var(--muted)}
+.links{display:flex;gap:26px;margin-left:auto;font-size:14px}
+.links a{text-decoration:none;color:var(--ink2);position:relative;padding-block:4px}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--accent);transition:right .35s var(--ease)}
+.links a:hover::after{right:0}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2);white-space:nowrap}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(204,66,119,.5);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(204,66,119,0)}100%{box-shadow:0 0 0 0 rgba(204,66,119,0)}}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;position:relative}
+.lang input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.lang label{font:600 11px/1 var(--body);letter-spacing:.08em;color:var(--muted);padding:8px 11px;border-radius:999px;cursor:pointer;touch-action:manipulation}
+.lang input:checked+label{background:var(--ink);color:var(--paper)}
+.lang input:focus-visible+label{outline:2px solid var(--accent);outline-offset:2px}
+/* language switch without JavaScript (file previews) */
+:root:has(#lang-en:checked) .ru{display:none!important}
+:root:has(#lang-en:checked) .en{display:revert!important}
+@media (max-width:1000px){.status{display:none}}
+@media (max-width:760px){.links{display:none}.lang{margin-left:auto}.brand .nm small{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(28px,4vw,48px) 0}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.meta div{font-size:13px;color:var(--ink2)}
+.meta div span.eyebrow{display:block;margin-bottom:4px}
+.meta div:nth-child(2){text-align:center}.meta div:nth-child(3){text-align:right}
+.title{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 32px;margin:clamp(18px,3vw,36px) 0 0}
+.title h1{margin:0;font:800 clamp(64px,15.5vw,212px)/.86 var(--display);letter-spacing:-.065em;color:var(--ink);margin-left:-.04em}
+@supports (-webkit-background-clip:text) or (background-clip:text){
+  .title h1 span{display:inline-block;padding:.14em .06em .18em 0;margin:-.14em 0 -.18em;background:url(img/pony.webp) 50% 30%/cover, var(--ink);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pan 22s ease-in-out infinite alternate}
+}
+@keyframes pan{to{background-position:50% 70%}}
+.title .role{margin-left:auto;padding-bottom:.15em;font:italic 500 clamp(26px,4.6vw,62px)/1 var(--serif);color:var(--accent);text-align:right}
+.hero-row{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,6vw,96px);align-items:end;margin-top:clamp(32px,5vw,56px)}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.55;max-width:32em;margin:0;color:var(--ink2)}
+.lead b{font-weight:600;color:var(--ink)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:600 14px var(--body);text-decoration:none;border:1px solid var(--ink);transition:transform .25s var(--ease),background .25s,color .25s;cursor:pointer;background:none}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.facts{margin:0;display:grid;border-top:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;font-weight:500}
+@media (max-width:860px){.hero-row{grid-template-columns:1fr}.meta{grid-template-columns:1fr 1fr}.meta div:nth-child(2){display:none}.title .role{margin-left:0;text-align:left}}
+
+/* strip */
+.strip{margin-top:clamp(48px,7vw,88px);overflow:hidden;border-block:1px solid var(--line);padding-block:22px;background:var(--blush)}
+.strip .track{display:flex;gap:18px;width:max-content;animation:mq 70s linear infinite}
+.strip:hover .track{animation-play-state:paused}
+.strip button{flex:none;height:clamp(200px,24vw,300px);padding:0;border:0;background:none;cursor:zoom-in;transition:transform .4s var(--ease)}
+.strip button:hover{transform:translateY(-6px) rotate(-1deg)}
+.strip img{height:100%;width:auto;box-shadow:0 14px 30px -16px rgba(44,24,34,.5)}
+@keyframes mq{to{transform:translateX(-50%)}}
+html:not(.js) .strip,html:not(.js) footer .clock,html:not(.js) .copy,html:not(.js) .more-btn{display:none}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px)}
+.quote{font:italic 500 clamp(30px,3.8vw,50px)/1.12 var(--serif);margin:22px 0 0;letter-spacing:-.01em;text-wrap:balance}
+.quote em{color:var(--accent)}
+.about .txt p{font-size:17px;max-width:34em;margin:0 0 16px;color:var(--ink2)}
+.about .txt a{color:var(--accent);text-underline-offset:3px}
+.services{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid var(--ink)}
+.services li{border-bottom:1px solid var(--line)}
+.about .txt .services a{color:inherit}
+.services a{text-decoration:none;display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:20px 0;transition:padding .35s var(--ease)}
+.services a:hover,.services a:focus-visible{padding-left:12px}
+.services a:hover b{color:var(--accent)}
+.services b{font:500 clamp(18px,2vw,22px)/1.2 var(--display);letter-spacing:-.02em}
+.services span.d{grid-column:1;color:var(--muted);font-size:14px}
+.services .ar{grid-row:1/3;grid-column:2;align-self:center;display:grid;font-size:20px;color:var(--accent);opacity:0;transform:translateX(-8px);transition:.35s var(--ease)}
+.services a:hover .ar,.services a:focus-visible .ar{opacity:1;transform:none}
+@media (hover:none){.services .ar{opacity:1;transform:none}}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* ---------- projects ---------- */
+.projects-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid var(--ink)}
+.projects-head p{max-width:26em;margin:0;color:var(--muted)}
+.project{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:clamp(24px,5vw,72px);padding-block:clamp(40px,6vw,80px);border-bottom:1px solid var(--line)}
+.project .info{position:sticky;top:100px;align-self:start}
+.project .cnt{font:500 12px var(--display);color:var(--accent);letter-spacing:.02em}
+.project h3{font:600 clamp(24px,2.8vw,36px)/1.08 var(--display);letter-spacing:-.03em;margin:10px 0 14px;text-wrap:balance}
+.project p{color:var(--ink2);margin:0 0 18px;max-width:28em}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink2);background:var(--paper)}
+.gal{columns:2;column-gap:clamp(12px,1.6vw,20px)}
+.gal.one{columns:1}
+.work{break-inside:avoid;display:block;width:100%;margin:0 0 clamp(12px,1.6vw,20px);padding:0;border:0;background:none;cursor:zoom-in;position:relative;text-align:left}
+.work .ph{display:block;overflow:hidden;background:var(--blush)}
+.work img{width:100%;height:auto;transition:transform .8s var(--ease)}
+.work:hover img{transform:scale(1.04)}
+.work .lbl{position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:rgba(255,245,247,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:13px;line-height:1.35;opacity:0;transform:translateY(8px);transition:.35s var(--ease)}
+.work .lbl b{font-weight:600;display:block}
+.work .lbl small{display:block;color:var(--muted);font-size:12.5px}
+.work .lbl .go{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:15px}
+.work:hover .lbl,.work:focus-visible .lbl{opacity:1;transform:none}
+/* touch: caption sits under the artwork, never on top of it */
+@media (hover:none){
+  .work .lbl{position:static;opacity:1;transform:none;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:10px 2px 0;border-radius:0}
+  .work .lbl .go{display:none}
+  .work .lbl small{display:block;color:var(--muted);font-size:12.5px}
+}
+/* icons */
+.ic{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.14em;overflow:visible}
+.ic.dn{transform:rotate(90deg)}.ic.up{transform:rotate(-90deg)}.ic.lf{transform:rotate(180deg)}.ic.ne{transform:rotate(-45deg)}
+/* gallery dots (mobile) */
+.dots{display:none;justify-content:center;gap:6px;margin-top:14px}
+.dots i{width:6px;height:6px;border-radius:3px;background:var(--line);transition:width .3s var(--ease),background .3s}
+.dots i.on{width:20px;background:var(--accent)}
+@media (max-width:860px){.project{grid-template-columns:1fr}.project .info{position:static}}
+@media (max-width:480px){.gal{columns:1}}
+
+/* ---------- case (dark band) ---------- */
+.band{background:var(--ink);color:#F6E3EA}
+.band .eyebrow{color:#C79AAA}
+.band h2 .serif{color:#F3A1BC}
+.case-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px);align-items:start}
+.case-top .quote{color:#F6E3EA}
+.case-top .quote em{color:#F3A1BC}
+.roles{list-style:none;margin:0;padding:0;border-top:1px solid rgba(246,227,234,.25)}
+.roles li{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid rgba(246,227,234,.14)}
+.roles .k{font:500 13px/1.5 var(--display);color:#F3A1BC}
+.roles p{margin:0}
+.roles small{display:block;color:#C79AAA;font-size:14px;margin-top:4px}
+@media (max-width:860px){.case-top{grid-template-columns:1fr}.roles li{grid-template-columns:1fr;gap:4px}}
+
+.decks{margin-top:clamp(56px,8vw,100px)}
+.deck-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.deck-head h3{font:600 clamp(22px,2.6vw,32px)/1.1 var(--display);letter-spacing:-.03em;margin:10px 0 0}
+.deck-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.deck-tabs label{border:1px solid rgba(246,227,234,.25);background:none;color:#F6E3EA;font:500 14px/1.35 var(--body);padding:10px 16px;border-radius:12px;cursor:pointer;text-align:left;touch-action:manipulation;transition:background .25s,color .25s}
+.deck-tabs label small{display:block;color:#C79AAA;font-size:12px;margin-top:2px}
+.dk{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+#deck-rm:checked~.deck-head label[for="deck-rm"],#deck-de:checked~.deck-head label[for="deck-de"]{background:#F6E3EA;color:var(--ink);border-color:#F6E3EA}
+#deck-rm:checked~.deck-head label[for="deck-rm"] small,#deck-de:checked~.deck-head label[for="deck-de"] small{color:var(--muted)}
+.dk:focus-visible~.deck-head .deck-tabs{outline:2px solid #F3A1BC;outline-offset:4px;border-radius:14px}
+#deck-rm:checked~.stage #track-de,#deck-de:checked~.stage #track-rm{display:none}
+.stage{position:relative}
+.slides{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:10px}
+.slides::-webkit-scrollbar{display:none}
+.slides img{flex:0 0 100%;width:100%;max-width:100%;aspect-ratio:16/9;object-fit:cover;scroll-snap-align:center;border-radius:10px;background:#1C0F15;box-shadow:0 30px 60px -36px rgba(0,0,0,.9)}
+.swipe-hint{display:none}
+html:not(.js) .swipe-hint{display:inline}
+html:not(.js) .arrow,html:not(.js) .progress,html:not(.js) .count{display:none}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,245,247,.94);color:var(--ink);font-size:18px;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35);transition:transform .2s}
+.arrow:hover{transform:translateY(-50%) scale(1.08)}
+.prev{left:14px}.next{right:14px}
+.deck-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:16px;font-size:13px;color:#C79AAA}
+.deck-bar .count{font:500 14px var(--display);color:#F6E3EA;font-variant-numeric:tabular-nums}
+.progress{height:2px;background:rgba(246,227,234,.15);margin-top:12px;border-radius:2px;overflow:hidden}
+.progress i{display:block;height:100%;background:#F3A1BC;transition:width .4s var(--ease)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--accent);color:var(--accent-ink)}
+.contact .eyebrow{color:rgba(255,245,247,.75)}
+.contact h2{font-size:clamp(44px,9vw,128px);font-weight:800;letter-spacing:-.06em;line-height:.9}
+.contact h2 .serif{color:var(--accent-ink);font-weight:500;font-size:1em;letter-spacing:-.02em}
+.mail{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:clamp(32px,5vw,56px);padding-bottom:24px;border-bottom:1px solid rgba(255,245,247,.4)}
+.mail a{font:500 clamp(22px,4vw,48px)/1.1 var(--display);letter-spacing:-.03em;text-decoration:none;word-break:break-all}
+.mail a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.copy{margin-left:auto;border:1px solid rgba(255,245,247,.7);background:none;color:var(--accent-ink);padding:10px 18px;border-radius:999px;cursor:pointer;font:600 13px var(--body)}
+.copy:hover{background:var(--accent-ink);color:var(--accent)}
+.socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;margin-top:8px}
+.socials a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;text-decoration:none;border-bottom:1px solid rgba(255,245,247,.4)}
+.socials a:first-child{padding-right:24px}
+.socials small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:4px}
+.socials b{font:500 clamp(17px,2vw,22px) var(--display);letter-spacing:-.02em;word-break:break-all}
+.socials .ar{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,245,247,.55);font-size:20px;transition:transform .3s var(--ease),background .3s,color .3s}
+.socials a:hover .ar{background:var(--accent-ink);color:var(--accent)}
+.socials a:hover .ar{transform:translate(4px,-4px)}
+footer{background:var(--accent);color:rgba(255,245,247,.8);font-size:13px;padding-block:24px 36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,245,247,.25);padding-top:24px}
+
+
+/* ---------- v3: cursor, progress, intro ---------- */
+.nav::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:var(--p,0%);background:var(--accent);transition:width .1s linear}
+.cur{position:fixed;left:0;top:0;z-index:300;pointer-events:none;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#FFF5F7;font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),opacity .2s;opacity:0}
+.cur.on{opacity:1}
+.cur span{opacity:0;transition:opacity .2s}
+.cur.big{width:92px;height:92px;margin:-46px 0 0 -46px}
+.cur.big span{opacity:1}
+@media (pointer:fine){.work,.strip button,.slides{cursor:none}}
+@media (pointer:coarse){.cur{display:none}}
+@keyframes rise{from{clip-path:inset(-20% -5% 100% -5%);transform:translateY(.25em)}to{clip-path:inset(-20% -5% -25% -5%);transform:none}}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.title h1{animation:rise 1.1s var(--ease) both}
+.title .role{animation:fadeup .9s .35s var(--ease) both}
+.meta{animation:fadeup .8s .1s var(--ease) both}
+.hero-row{animation:fadeup .9s .5s var(--ease) both}
+
+/* ---------- index ---------- */
+.idx{list-style:none;margin:0;padding:0;counter-reset:n}
+.idx li{border-bottom:1px solid var(--line)}
+.idx button{display:grid;grid-template-columns:64px minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) 32px;align-items:center;gap:20px;width:100%;padding:22px 0;border:0;background:none;text-align:left;cursor:pointer;transition:padding .4s var(--ease),color .3s}
+.idx .n{font:500 13px var(--display);color:var(--muted);font-variant-numeric:tabular-nums}
+.idx .t{font:500 clamp(18px,2.2vw,28px)/1.15 var(--display);letter-spacing:-.03em}
+.idx .c,.idx .k{font-size:14px;color:var(--ink2)}
+.idx .ar{display:grid;font-size:20px;color:var(--accent);opacity:0;transform:translateX(-8px);transition:.35s var(--ease)}
+.idx .mini{display:none}
+.idx button:hover{padding-left:16px;color:var(--accent)}
+.idx button:hover .ar{opacity:1;transform:none}
+.peek{position:fixed;left:0;top:0;z-index:40;width:260px;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.85) rotate(-4deg);transition:opacity .25s,transform .35s var(--ease);box-shadow:0 30px 60px -25px rgba(44,24,34,.55)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-4deg)}
+@media (pointer:coarse),(max-width:760px){.peek{display:none}}
+@media (max-width:760px){.idx button{grid-template-columns:56px minmax(0,1fr) 24px;gap:14px;padding:14px 0}.idx .c,.idx .k,.idx .n{display:none}.idx .mini{display:block;width:56px;height:56px;object-fit:cover;background:var(--blush)}.idx .sub{display:block;font:400 13px var(--body);color:var(--muted);letter-spacing:0;margin-top:2px}.idx .ar{opacity:1;transform:none}}
+.idx .sub{display:none}
+
+/* ---------- process ---------- */
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink)}
+.steps li{padding:26px 22px 30px 0;border-right:1px solid var(--line);position:relative}
+.steps li+li{padding-left:22px}
+.steps li:last-child{border-right:0}
+.steps .no{font:italic 500 44px/1 var(--serif);color:var(--accent)}
+.steps b{display:block;font:500 17px/1.25 var(--display);letter-spacing:-.02em;margin:18px 0 8px}
+.steps p{margin:0;font-size:14px;color:var(--ink2)}
+@media (max-width:980px){.steps{grid-template-columns:1fr 1fr}.steps li{border-right:0;border-bottom:1px solid var(--line);padding-left:0!important}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* ---------- footer v3 ---------- */
+.bigname{font:800 clamp(80px,21vw,300px)/.8 var(--display);letter-spacing:-.07em;margin:clamp(56px,8vw,100px) 0 0 -.04em;color:transparent;-webkit-text-stroke:1.5px rgba(255,245,247,.55);white-space:nowrap;user-select:none}
+footer .wrap{align-items:center}
+footer .clock{font-variant-numeric:tabular-nums}
+footer a{text-decoration:none;border-bottom:1px solid rgba(255,245,247,.5)}
+
+
+/* ---------- experience ---------- */
+.exp{list-style:none;margin:0;padding:0}
+.exp li{display:grid;grid-template-columns:140px minmax(0,1.1fr) minmax(0,1.5fr);gap:24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:background .3s}
+.exp li:hover{background:linear-gradient(90deg,transparent,var(--paper) 30%,var(--paper) 70%,transparent)}
+.exp .yr{font:500 14px var(--display);color:var(--accent);font-variant-numeric:tabular-nums}
+.exp b{display:block;font:500 clamp(17px,1.8vw,22px)/1.2 var(--display);letter-spacing:-.025em}
+.exp small{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.exp p{margin:0;color:var(--ink2)}
+.exp p a{color:var(--accent);text-underline-offset:3px}
+@media (max-width:760px){.exp li{grid-template-columns:1fr;gap:6px}}
+.tools{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;padding:36px 0;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips>span{font:500 14px var(--body);padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--paper)}
+.chips>span:nth-child(n+5){background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+@media (max-width:760px){.tools{grid-template-columns:1fr;gap:14px}}
+.more{padding-top:clamp(56px,7vw,88px)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:20px}
+.cards>div{background:var(--bg);padding:28px 26px 30px;transition:background .3s}
+.cards>div:hover{background:var(--paper)}
+.cards .big{display:block;font:italic 500 clamp(34px,3.6vw,48px)/1 var(--serif);color:var(--accent);margin-bottom:16px}
+.cards p{margin:0;color:var(--ink2);font-size:15px}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.awards-wrap{padding-top:clamp(56px,7vw,88px)}
+.awards{list-style:none;margin:20px 0 0;padding:0;columns:2 420px;column-gap:48px}
+.awards li{break-inside:avoid;display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.awards .tag{font:500 12px/1.5 var(--display);color:var(--accent)}
+.awards p{margin:0;font-size:15px;color:var(--ink2)}
+@media (max-width:520px){.awards li{grid-template-columns:1fr;gap:4px}}
+
+
+/* ---------- v5: compact + mobile ---------- */
+.menu{display:none}
+.burger{display:flex;list-style:none;border:0;background:none;width:40px;height:40px;padding:10px 8px;cursor:pointer;flex-direction:column;justify-content:center;gap:6px;touch-action:manipulation}
+.burger::-webkit-details-marker{display:none}
+.burger::marker{content:""}
+.burger i{display:block;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease)}
+.menu[open] .burger i:first-child{transform:translateY(4px) rotate(45deg)}
+.menu[open] .burger i:last-child{transform:translateY(-4px) rotate(-45deg)}
+.mnav{position:absolute;left:0;right:0;top:100%;display:flex;flex-direction:column;padding:4px clamp(16px,4vw,48px) 18px;border-block:1px solid var(--line-soft);background:var(--bg);box-shadow:0 24px 40px -30px rgba(44,24,34,.5)}
+.mnav a{text-decoration:none;font:500 21px/1.2 var(--display);letter-spacing:-.02em;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.mnav a:last-child{border-bottom:0}
+.js .awards li.extra{display:none}
+.js .awards.all li.extra{display:grid}
+.more-btn{margin-top:18px;border:1px solid var(--ink);background:none;border-radius:999px;padding:11px 20px;font:600 13px var(--body);cursor:pointer}
+.more-btn:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:760px){
+  section{padding-block:56px}
+  .menu{display:block}
+  .nav .wrap{gap:12px}
+  .facts{display:none}
+  .hero-row{margin-top:24px}
+  .lead{font-size:16px}
+  .cta{margin-top:20px}.btn{padding:13px 18px}
+  .strip{margin-top:36px;padding-block:14px}
+  .strip button{height:170px}
+  .projects-head{padding-bottom:18px}
+  .projects-head p{display:none}
+  .project{padding-block:32px;gap:14px}
+  .project h3{margin:6px 0 8px}
+  .project p{font-size:15px;margin-bottom:12px}
+  .project .tags{display:none}
+  .dots{display:flex}
+  .gal{columns:auto;display:flex;align-items:flex-start;gap:14px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1 * clamp(16px,4vw,48px));padding-inline:clamp(16px,4vw,48px);scroll-padding-inline:clamp(16px,4vw,48px);scrollbar-width:none}
+  .gal::-webkit-scrollbar{display:none}
+  .gal .work{flex:0 0 auto;width:min-content;margin:0;scroll-snap-align:start}
+  .gal .work .ph{border-radius:4px;box-shadow:0 18px 30px -22px rgba(44,24,34,.6)}
+  .gal .work img{height:auto;width:auto;max-height:min(62vh,440px);max-width:80vw}
+  .gal .work .lbl{font-size:14px}
+  .gal .work:hover img{transform:none}
+  .case-top .quote{font-size:26px}
+  .roles li{padding:14px 0}
+  .decks{margin-top:44px}
+  .deck-tabs{width:100%;display:grid;grid-template-columns:1fr 1fr}
+  .deck-tabs label{padding:10px 12px}
+  .arrow{width:36px;height:36px;font-size:15px;background:rgba(255,245,247,.8)}.prev{left:8px}.next{right:8px}
+  .slides{margin-inline:calc(-1 * clamp(16px,4vw,48px));padding-inline:clamp(16px,4vw,48px);scroll-padding-inline:clamp(16px,4vw,48px);gap:10px;border-radius:0}
+  .slides img{flex-basis:88%;width:88%;border-radius:6px;scroll-snap-align:start}
+  .quote{font-size:28px;margin-top:14px}
+  .about{gap:20px}
+  .about .txt p{font-size:16px}
+  .services{margin-top:22px}
+  .services a{padding:13px 0}
+  .services span.d{display:none}
+  .services b{font-size:16px}
+  .exp li{padding:16px 0;gap:4px}
+  .exp p{font-size:15px}
+  .tools{padding:24px 0}
+  .more{padding-top:44px}
+  .cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;background:none;border:0;margin-inline:calc(-1 * clamp(16px,4vw,48px));padding-inline:clamp(16px,4vw,48px);scroll-padding-inline:clamp(16px,4vw,48px);scrollbar-width:none}
+  .cards::-webkit-scrollbar{display:none}
+  .cards>div{flex:0 0 78%;scroll-snap-align:start;border:1px solid var(--line);padding:22px 20px}
+  .awards-wrap{padding-top:44px}
+  .awards li{padding:12px 0}
+  .contact h2{font-size:40px}
+  .mail a{font-size:22px}
+  .copy{margin-left:0}
+  .socials a{padding:18px 0}
+  .socials a:first-child{padding-right:0}
+  footer .wrap{flex-direction:column;align-items:flex-start;gap:8px}
+}
+@media (pointer:coarse){
+  /* phones: no full-screen noise layer and no animated photo fill, both repaint every frame */
+  body::after{display:none}
+  .title h1 span{animation:none!important}
+  .title h1{animation:fadeup .8s var(--ease) both}
+  .btn,.more-btn,.copy{touch-action:manipulation}
+}
+@media (min-width:761px){.exp-more{display:none}}
+@media (max-width:760px){
+  .meta{display:none}
+  .title{margin-top:8px}
+  .title h1{font-size:23vw}
+  .js .exp li.x{display:none}
+  .js .exp.all li.x{display:grid}
+  .exp-more{margin-bottom:8px}
+}
+
+@keyframes flash{0%,40%{background-color:rgba(204,66,119,.12)}100%{background-color:transparent}}
+.flash{animation:flash 1.8s ease}
+section,.project,#decks{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 68px)}
+.project,#decks{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 84px)}
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(28,15,21,.95);display:grid;grid-template-rows:1fr auto;padding:calc(env(safe-area-inset-top,0px) + 64px) 16px calc(env(safe-area-inset-bottom,0px) + 18px)}
+.lb .fig{display:grid;min-height:0;place-items:center}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;min-height:0;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb .meta2{color:#F6E3EA;text-align:center;padding-top:16px;font-size:15px}
+.lb .meta2 small{display:block;color:#C79AAA;margin-top:2px}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:48px;height:48px;border-radius:50%;font-size:18px;cursor:pointer;display:grid;place-items:center;touch-action:manipulation}
+.lb button:hover{background:rgba(255,255,255,.2)}
+.lb .x{top:calc(env(safe-area-inset-top,0px) + 12px);right:16px}
+.lb .l{left:16px;top:50%}.lb .r{right:16px;top:50%}
+@media (max-width:600px){.lb .l,.lb .r{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 14px)}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ar" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+</svg>
+<nav class="nav" aria-label="Навигация">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Дарья — на главную">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="12" fill="#2C1822"/>
+        <text x="19.5" y="29.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="600" font-size="30" fill="#F8E8EC">D</text>
+        <path d="M31 8.5l1.1 2.6 2.6 1.1-2.6 1.1-1.1 2.6-1.1-2.6-2.6-1.1 2.6-1.1z" fill="#E6A0B4"/>
+      </svg>
+      <span class="nm"><b><span class="ru">Дарья</span><span class="en">Darya</span></b><small><span class="ru">графический дизайнер</span><span class="en">graphic designer</span></small></span>
+    </a>
+    <div class="links">
+      <a href="#projects"><span class="ru">Проекты</span><span class="en">Projects</span></a>
+      <a href="#reading-marks">Reading Marks</a>
+      <a href="#about"><span class="ru">Обо мне</span><span class="en">About</span></a>
+      <a href="#experience"><span class="ru">Опыт</span><span class="en">Experience</span></a>
+      <a href="#contact"><span class="ru">Контакты</span><span class="en">Contact</span></a>
+    </div>
+    <div class="status"><i></i><span class="ru">Открыта к проектам</span><span class="en">Available for work</span></div>
+    <div class="lang" role="radiogroup" aria-label="Язык / Language">
+      <input type="radio" name="lang" id="lang-ru" value="ru" checked><label for="lang-ru">RU</label>
+      <input type="radio" name="lang" id="lang-en" value="en"><label for="lang-en">EN</label>
+    </div>
+    <details class="menu" id="menu">
+      <summary class="burger" aria-label="Меню"><i></i><i></i></summary>
+      <div class="mnav" id="mnav">
+        <a href="#projects"><span class="ru">Проекты</span><span class="en">Projects</span></a>
+        <a href="#reading-marks">Reading Marks</a>
+        <a href="#about"><span class="ru">Обо мне</span><span class="en">About</span></a>
+        <a href="#experience"><span class="ru">Опыт</span><span class="en">Experience</span></a>
+        <a href="#contact"><span class="ru">Контакты</span><span class="en">Contact</span></a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="meta">
+      <div><span class="eyebrow"><span class="ru">Портфолио</span><span class="en">Portfolio</span></span><span class="ru">Графический дизайн</span><span class="en">Graphic design</span></div>
+      <div><span class="eyebrow"><span class="ru">Фокус</span><span class="en">Focus</span></span><span class="ru">Постеры · Реклама · SMM · Айдентика</span><span class="en">Posters · Ads · Social · Identity</span></div>
+      <div><span class="eyebrow"><span class="ru">Город</span><span class="en">Based in</span></span><span class="ru">Новомосковск, Тульская обл.</span><span class="en">Novomoskovsk, Tula region</span></div>
+    </div>
+    <div class="title">
+      <h1><span class="ru">Дарья</span><span class="en">Darya</span></h1>
+      <div class="role"><span class="ru">графический<br>дизайнер</span><span class="en">graphic<br>designer</span></div>
+    </div>
+    <div class="hero-row">
+      <div>
+        <p class="lead">
+          <span class="ru">Делаю <b>постеры, рекламу, карточки для маркетплейсов, айдентику и презентации</b>. В медиа и SMM с 2019 года: вела соцсети, руководила командой, запускала ребрендинг мебельной фабрики.</span>
+          <span class="en">I design <b>posters, ads, marketplace cards, brand identities and presentations</b>. In media and social since 2019: I’ve run social accounts, led a team and launched a furniture factory’s rebrand.</span>
+        </p>
+        <div class="cta">
+          <a class="btn solid" href="#projects"><span class="ru">Смотреть проекты</span><span class="en">View projects</span> <svg class="ic dn" aria-hidden="true"><use href="#i-ar"/></svg></a>
+          <a class="btn ghost" href="#contact"><span class="ru">Обсудить задачу</span><span class="en">Start a project</span></a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt><span class="ru">Опыт</span><span class="en">Experience</span></dt><dd><span class="ru">CEO и главный дизайнер Reading Marks</span><span class="en">CEO &amp; lead designer, Reading Marks</span></dd></div>
+        <div><dt><span class="ru">В медиа</span><span class="en">In media</span></dt><dd><span class="ru">с 2019 года</span><span class="en">since 2019</span></dd></div>
+        <div><dt><span class="ru">Инструменты</span><span class="en">Tools</span></dt><dd>Figma, Photoshop, Lightroom, Premiere Pro</dd></div>
+        <div><dt><span class="ru">Связь</span><span class="en">Contact</span></dt><dd><a href="https://t.me/littlebodybigheartd" target="_blank" rel="noopener">Telegram</a> · <a href="https://instagram.com/banjosquirrell" target="_blank" rel="noopener">Instagram</a></dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="strip" aria-label="Работы"><div class="track" id="strip"></div></div>
+</header>
+
+
+<section id="projects" class="wrap">
+  <div class="projects-head">
+    <div>
+      <div class="eyebrow"><span class="ru">Избранные работы</span><span class="en">Selected work</span></div>
+      <h2><span class="ru">Проекты</span><span class="en">Projects</span> <span class="serif"><span class="ru">и серии</span><span class="en">&amp; series</span></span></h2>
+    </div>
+    <p><span class="ru">Нажмите на любую работу, чтобы открыть её в полном размере.</span><span class="en">Tap any piece to see it full size.</span></p>
+  </div>
+
+  <article class="project" id="p-music">
+    <div class="info">
+      <div class="cnt"><span class="ru">Серия · 5 постеров</span><span class="en">Series · 5 posters</span></div>
+      <h3><span class="ru">Музыкальные постеры</span><span class="en">Music posters</span></h3>
+      <p><span class="ru">Каждый постер начинается со строчки из песни. Типографика здесь главный герой: рукописные скрипты, граффити, растр и фактура мятой бумаги.</span><span class="en">Each poster starts with a line from a song. Type is the lead here: hand-written scripts, graffiti, halftone and crumpled-paper texture.</span></p>
+      <div class="tags"><span><span class="ru">Типографика</span><span class="en">Typography</span></span><span><span class="ru">Коллаж</span><span class="en">Collage</span></span><span><span class="ru">Печать</span><span class="en">Print</span></span></div>
+    </div>
+    <div class="gal" data-set="music"><button class="work" data-f="pony"><span class="ph"><img src="img/pony.webp" alt="Pink Pony Club" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Pink Pony Club</span><span class="en">Pink Pony Club</span></b><small><span class="ru">Музыкальный постер</span><span class="en">Music poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="vicious"><span class="ph"><img src="img/vicious.webp" alt="Vicious" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Vicious</span><span class="en">Vicious</span></b><small><span class="ru">Музыкальный постер</span><span class="en">Music poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="weird"><span class="ph"><img src="img/weird.webp" alt="You’re being weird" loading="lazy"></span><span class="lbl"><span><b><span class="ru">You’re being weird</span><span class="en">You’re being weird</span></b><small><span class="ru">Типографический постер</span><span class="en">Type poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="dolly"><span class="ph"><img src="img/dolly.webp" alt="This old one day" loading="lazy"></span><span class="lbl"><span><b><span class="ru">This old one day</span><span class="en">This old one day</span></b><small><span class="ru">Музыкальный постер</span><span class="en">Music poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="nightmime"><span class="ph"><img src="img/nightmime.webp" alt="Night mime" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Night mime</span><span class="en">Night mime</span></b><small><span class="ru">Музыкальный постер</span><span class="en">Music poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button></div>
+  </article>
+
+  <article class="project" id="p-ads">
+    <div class="info">
+      <div class="cnt"><span class="ru">Реклама · 4 макета</span><span class="en">Advertising · 4 layouts</span></div>
+      <h3><span class="ru">Реклама и SMM</span><span class="en">Ads &amp; social media</span></h3>
+      <p><span class="ru">Сторис для приложения «Копейка», баннер сертификатов «Сицилии», промо-пост с промокодом и рекламный постер матраса. Главное считывается за секунду.</span><span class="en">Stories for the Kopeyka app, a gift-card banner for Sicilia, a promo post with a discount code and a mattress ad. The key message lands in a second.</span></p>
+      <div class="tags"><span><span class="ru">Сторис</span><span class="en">Stories</span></span><span><span class="ru">Баннеры</span><span class="en">Banners</span></span><span><span class="ru">Продукт</span><span class="en">Product</span></span></div>
+    </div>
+    <div class="gal" data-set="ads"><button class="work" data-f="kopeyka"><span class="ph"><img src="img/kopeyka.webp" alt="Kopeyka" loading="lazy"></span><span class="lbl"><span><b><span class="ru">«Копейка»</span><span class="en">Kopeyka</span></b><small><span class="ru">Реклама приложения, сторис</span><span class="en">App ad, stories</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="fvb"><span class="ph"><img src="img/fvb.webp" alt="FVB" loading="lazy"></span><span class="lbl"><span><b><span class="ru">FVB</span><span class="en">FVB</span></b><small><span class="ru">Промо-пост с промокодом</span><span class="en">Promo post with a code</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="matras"><span class="ph"><img src="img/matras.webp" alt="Orthopedic mattress" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Ортопедический матрас</span><span class="en">Orthopedic mattress</span></b><small><span class="ru">Рекламный постер</span><span class="en">Product ad</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="sicilia"><span class="ph"><img src="img/sicilia.webp" alt="Sicilia" loading="lazy"></span><span class="lbl"><span><b><span class="ru">«Сицилия»</span><span class="en">Sicilia</span></b><small><span class="ru">Баннер подарочного сертификата</span><span class="en">Gift card banner</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button></div>
+  </article>
+
+  <article class="project" id="p-art">
+    <div class="info">
+      <div class="cnt"><span class="ru">Авторское · 4 постера</span><span class="en">Personal · 4 posters</span></div>
+      <h3><span class="ru">Коллаж и иллюстрация</span><span class="en">Collage &amp; illustration</span></h3>
+      <p><span class="ru">Сюжетные постеры: фото, вырезки и рисованный скетч складываются в одну историю. Здесь я пробую смелые сочетания и новые приёмы.</span><span class="en">Story-driven posters: photos, cut-outs and hand-drawn sketches come together into one scene. This is where I try bold combinations and new techniques.</span></p>
+      <div class="tags"><span><span class="ru">Коллаж</span><span class="en">Collage</span></span><span><span class="ru">Иллюстрация</span><span class="en">Illustration</span></span></div>
+    </div>
+    <div class="gal" data-set="art"><button class="work" data-f="cult"><span class="ph"><img src="img/cult.webp" alt="Is this a cult?" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Is this a cult?</span><span class="en">Is this a cult?</span></b><small><span class="ru">Коллаж</span><span class="en">Collage</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="lost"><span class="ph"><img src="img/lost.webp" alt="Lost in the crowd" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Потерянный взгляд в толпе</span><span class="en">Lost in the crowd</span></b><small><span class="ru">Иллюстрированный постер</span><span class="en">Illustrated poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="love"><span class="ph"><img src="img/love.webp" alt="So this is love" loading="lazy"></span><span class="lbl"><span><b><span class="ru">So this is love</span><span class="en">So this is love</span></b><small><span class="ru">Коллаж</span><span class="en">Collage</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="close"><span class="ph"><img src="img/close.webp" alt="Shut it in" loading="lazy"></span><span class="lbl"><span><b><span class="ru">Закрой его</span><span class="en">Shut it in</span></b><small><span class="ru">Иллюстрированный постер</span><span class="en">Illustrated poster</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button></div>
+  </article>
+
+  <article class="project" id="p-brand">
+    <div class="info">
+      <div class="cnt"><span class="ru">Айдентика · 2 знака</span><span class="en">Identity · 2 marks</span></div>
+      <h3><span class="ru">Логотипы</span><span class="en">Logos</span></h3>
+      <p><span class="ru">«Флафф» — магазин матрасов, мягкий и дружелюбный знак. RW — пирсинг-студия, где буквы соединены, как украшение.</span><span class="en">Flaff, a mattress store with a soft, friendly mark. RW, a piercing studio whose letters are linked like jewellery.</span></p>
+      <div class="tags"><span><span class="ru">Логотип</span><span class="en">Logo</span></span><span><span class="ru">Бренд</span><span class="en">Brand</span></span></div>
+    </div>
+    <div class="gal" data-set="brand"><button class="work" data-f="flaff"><span class="ph"><img src="img/flaff.webp" alt="Flaff" loading="lazy"></span><span class="lbl"><span><b><span class="ru">«Флафф»</span><span class="en">Flaff</span></b><small><span class="ru">Логотип магазина матрасов</span><span class="en">Mattress store logo</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button><button class="work" data-f="rw"><span class="ph"><img src="img/rw.webp" alt="RW piercing" loading="lazy"></span><span class="lbl"><span><b><span class="ru">RW piercing</span><span class="en">RW piercing</span></b><small><span class="ru">Логотип пирсинг-студии</span><span class="en">Piercing studio logo</span></small></span><span class="go"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></span></button></div>
+  </article>
+</section>
+
+<img class="peek" id="peek" alt="" aria-hidden="true">
+
+
+<section id="reading-marks" class="band">
+  <div class="wrap">
+    <div class="case-top">
+      <div>
+        <div class="eyebrow"><span class="ru">Кейс · 2023–2025 · волонтёрский проект</span><span class="en">Case study · 2023–2025 · volunteer project</span></div>
+        <h2>Reading Marks</h2>
+        <p class="quote ru">Отвечала и за людей, и за картинку: <em>CEO</em> и <em>главный дизайнер</em> в одном лице.</p>
+        <p class="quote en">In charge of both the people and the picture: <em>CEO</em> and <em>lead designer</em> at once.</p>
+      </div>
+      <ul class="roles">
+        <li><span class="k">CEO</span><p><span class="ru">Руководила командой дизайнеров, копирайтеров и редакторов.</span><span class="en">Led a team of designers, copywriters and editors.</span><small class="ru">Распределяла задачи и следила за сроками.</small><small class="en">Assigned tasks and kept deadlines.</small></p></li>
+        <li><span class="k"><span class="ru">Главный дизайнер</span><span class="en">Lead designer</span></span><p><span class="ru">Следила, чтобы вся команда соблюдала единый дизайнерский подход.</span><span class="en">Made sure the whole team followed one design approach.</span><small class="ru">Проверяла макеты перед публикацией и давала правки.</small><small class="en">Reviewed layouts before publishing and gave feedback.</small></p></li>
+        <li><span class="k"><span class="ru">Система</span><span class="en">System</span></span><p><span class="ru">Шаблоны презентаций в фирменном стиле, в тёмной и светлой версии.</span><span class="en">On-brand slide templates in dark and light versions.</span><small class="ru">Любой участник собирал слайды, не ломая стиль.</small><small class="en">Anyone on the team could build slides without breaking the style.</small></p></li>
+      </ul>
+    </div>
+
+    <div class="decks" id="decks">
+      <input type="radio" name="deck" id="deck-rm" class="dk" value="rm" checked>
+      <input type="radio" name="deck" id="deck-de" class="dk" value="de">
+      <div class="deck-head">
+        <div>
+          <div class="eyebrow"><span class="ru">Шаблоны презентаций</span><span class="en">Presentation templates</span></div>
+          <h3><span class="ru">Листайте слайды</span><span class="en">Flip through the slides</span></h3>
+        </div>
+        <div class="deck-tabs" role="radiogroup" aria-label="Шаблоны">
+          <label for="deck-rm">Reading Marks · Speaking club<small class="ru">10 слайдов · тёмная и светлая тема</small><small class="en">10 slides · dark &amp; light</small></label>
+          <label for="deck-de"><span class="ru">Урок немецкого</span><span class="en">German lesson</span><small class="ru">9 слайдов · для 8 класса</small><small class="en">9 slides · for 8th grade</small></label>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="slides" id="track-rm" data-deck="rm"><img src="img/rm1.webp" alt="Слайд 1" data-s="0" loading="lazy"><img src="img/rm2.webp" alt="Слайд 2" data-s="1" loading="lazy"><img src="img/rm3.webp" alt="Слайд 3" data-s="2" loading="lazy"><img src="img/rm4.webp" alt="Слайд 4" data-s="3" loading="lazy"><img src="img/rm5.webp" alt="Слайд 5" data-s="4" loading="lazy"><img src="img/rm6.webp" alt="Слайд 6" data-s="5" loading="lazy"><img src="img/rm7.webp" alt="Слайд 7" data-s="6" loading="lazy"><img src="img/rm8.webp" alt="Слайд 8" data-s="7" loading="lazy"><img src="img/rm9.webp" alt="Слайд 9" data-s="8" loading="lazy"><img src="img/rm10.webp" alt="Слайд 10" data-s="9" loading="lazy"></div>
+        <div class="slides" id="track-de" data-deck="de"><img src="img/de1.webp" alt="Слайд 1" data-s="0" loading="lazy"><img src="img/de2.webp" alt="Слайд 2" data-s="1" loading="lazy"><img src="img/de3.webp" alt="Слайд 3" data-s="2" loading="lazy"><img src="img/de4.webp" alt="Слайд 4" data-s="3" loading="lazy"><img src="img/de5.webp" alt="Слайд 5" data-s="4" loading="lazy"><img src="img/de6.webp" alt="Слайд 6" data-s="5" loading="lazy"><img src="img/de7.webp" alt="Слайд 7" data-s="6" loading="lazy"><img src="img/de8.webp" alt="Слайд 8" data-s="7" loading="lazy"><img src="img/de9.webp" alt="Слайд 9" data-s="8" loading="lazy"></div>
+        <button class="arrow prev" id="sp" aria-label="Предыдущий слайд"><svg class="ic lf" aria-hidden="true"><use href="#i-ar"/></svg></button>
+        <button class="arrow next" id="sn" aria-label="Следующий слайд"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></button>
+      </div>
+      <div class="deck-bar"><span class="swipe-hint"><span class="ru">Листайте вбок</span><span class="en">Swipe sideways</span></span><span class="count" id="dcount"></span></div>
+      <div class="progress"><i id="prog"></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="wrap about">
+  <div>
+    <div class="eyebrow"><span class="ru">Обо мне</span><span class="en">About</span></div>
+    <p class="quote ru">Дизайн для меня — это <em>характер</em>, собранный в систему.</p>
+    <p class="quote en">To me, design is <em>character</em> built into a system.</p>
+  </div>
+  <div class="txt">
+    <p class="ru">Всем привет! Меня зовут Дарья, мне 19, я из Новомосковска, это рядом с Тулой. Работаю на стыке авторского и коммерческого дизайна: от музыкальных постеров и коллажей до баннеров, карточек для Wildberries, каталогов и ребрендинга.</p>
+    <p class="en">Hi! I’m Darya, 19, from Novomoskovsk near Tula. I work between personal and commercial design: from music posters and collages to banners, Wildberries product cards, catalogues and a full rebrand.</p>
+    <p class="ru">Выросла в очень творческой семье: картонные макеты, шитьё с нуля и пение были нормой, поэтому креативность — мой главный козырь. Параллельно учусь на психолога-практика в московском вузе и на ветеринара в колледже (очно-заочно).</p>
+    <p class="en">I grew up in a very creative family where cardboard models, sewing from scratch and singing were normal, so creativity is my strongest card. I also study practical psychology at a Moscow university and veterinary medicine at a college (part-time).</p>
+    <ul class="services">
+      <li><a href="#p-music"><b><span class="ru">Постеры и коллаж</span><span class="en">Posters &amp; collage</span></b><span class="d"><span class="ru">Музыкальные, типографические, иллюстрированные</span><span class="en">Music, typographic, illustrated</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+      <li><a href="#p-ads"><b><span class="ru">Реклама и маркетплейсы</span><span class="en">Ads &amp; marketplaces</span></b><span class="d"><span class="ru">Баннеры, карточки для Wildberries, каталоги</span><span class="en">Banners, Wildberries cards, catalogues</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+      <li><a href="#experience"><b>SMM</b><span class="d"><span class="ru">Ведение соцсетей, посты, сторис, тексты на русском и английском</span><span class="en">Running accounts, posts, stories, copy in Russian and English</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+      <li><a href="#p-brand"><b><span class="ru">Айдентика и ребрендинг</span><span class="en">Identity &amp; rebranding</span></b><span class="d"><span class="ru">Логотипы, шрифты с нуля, визуальный стиль бренда</span><span class="en">Logos, custom lettering, brand look</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+      <li><a href="#decks"><b><span class="ru">Презентации</span><span class="en">Presentations</span></b><span class="d"><span class="ru">Шаблоны в фирменном стиле для всей команды</span><span class="en">On-brand templates for the whole team</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+      <li><a href="#experience"><b><span class="ru">Анимация и фото</span><span class="en">Animation &amp; photo</span></b><span class="d"><span class="ru">Прикладная и монтажная анимация, художественная съёмка</span><span class="en">Camera-shot and edited animation, art photography</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+      <li><a href="#reading-marks"><b><span class="ru">Арт-дирекшн</span><span class="en">Art direction</span></b><span class="d"><span class="ru">Единый стиль, ревью макетов, работа с командой</span><span class="en">One visual language, layout reviews, team lead</span></span><span class="ar"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="experience" class="wrap" style="padding-top:0">
+  <div class="projects-head">
+    <div>
+      <div class="eyebrow"><span class="ru">С 2019 года</span><span class="en">Since 2019</span></div>
+      <h2><span class="ru">Опыт</span><span class="en">Experience</span> <span class="serif"><span class="ru">работы</span><span class="en">&amp; roles</span></span></h2>
+    </div>
+    <p><span class="ru">Дизайн, SMM, тексты и кино: где я работала и что делала.</span><span class="en">Design, social media, writing and film: where I’ve worked and what I did.</span></p>
+  </div>
+  <ol class="exp">
+    <li><span class="yr">2025</span><div><b><span class="ru">«Ноль Плюс»</span><span class="en">Nol Plus</span></b><small><span class="ru">стриминговый сервис</span><span class="en">streaming service</span></small></div><p><span class="ru">Методист, дизайнер и кинокритик. Дополнительно переводила фильмы для сервиса.</span><span class="en">Methodologist, designer and film critic. I also translated films for the service.</span></p></li>
+    <li><span class="yr">2023–2025</span><div><b>Reading Marks, Filming Marks</b><small><span class="ru">проекты по изучению английского и о кино</span><span class="en">English-learning and film projects</span></small></div><p><span class="ru">CEO и главный дизайнер: вела команду, отвечала за визуальный стиль, SMM и копирайтинг. <a href="#reading-marks">Подробнее в кейсе</a></span><span class="en">CEO and lead designer: led the team, owned the visual style, social media and copywriting. <a href="#reading-marks">See the case</a></span></p></li>
+    <li><span class="yr"><span class="ru">Проект</span><span class="en">Project</span></span><div><b><span class="ru">Тульская мебельная фабрика</span><span class="en">Tula furniture factory</span></b><small><span class="ru">производство мебели</span><span class="en">furniture manufacturer</span></small></div><p><span class="ru">Баннеры, карточки для Wildberries, каталоги. Главное — вместе запустили ребрендинг.</span><span class="en">Banners, Wildberries product cards, catalogues. Most importantly, we launched a rebrand together.</span></p></li>
+    <li><span class="yr">2024</span><div><b><span class="ru">Новомосковская библиотечная система</span><span class="en">Novomoskovsk Library System</span></b><small><span class="ru">МБУК, городские библиотеки</span><span class="en">municipal libraries</span></small></div><p><span class="ru">Дизайнер и SMM. Проводила арт-терапию, мастер-классы по анимации и «Звёздная ночь», акцию «Библионочь».</span><span class="en">Designer and social media. Ran art therapy, animation and “Starry Night” workshops and the Library Night event.</span></p></li>
+    <li class="x"><span class="yr">2024</span><div><b><span class="ru">Цветочный магазин</span><span class="en">Flower shop</span></b><small><span class="ru">Новомосковск</span><span class="en">Novomoskovsk</span></small></div><p><span class="ru">Флорист: собирала букеты и композиции.</span><span class="en">Florist: bouquets and arrangements.</span></p></li>
+    <li class="x"><span class="yr">2019–2023</span><div><b><span class="ru">Медиашкола «Медиа Квант»</span><span class="en">Media Kvant media school</span></b><small><span class="ru">школа для юных журналистов</span><span class="en">youth media school</span></small></div><p><span class="ru">SMM: вела соцсети школы, представляла её на форумах и во всероссийском проекте волонтёров медиабезопасности.</span><span class="en">Social media: ran the school’s accounts and represented it at forums and in a national media-safety volunteer project.</span></p></li>
+    <li class="x"><span class="yr"><span class="ru">Параллельно</span><span class="en">Alongside</span></span><div><b><span class="ru">Иностранная компания</span><span class="en">International company</span></b><small><span class="ru">название под NDA</span><span class="en">name under NDA</span></small></div><p><span class="ru">Копирайтер: статьи на английском о продвижении в соцсетях.</span><span class="en">Copywriter: articles in English on social media marketing.</span></p></li>
+    <li class="x"><span class="yr"><span class="ru">Параллельно</span><span class="en">Alongside</span></span><div><b><span class="ru">Художественный фотограф</span><span class="en">Art photographer</span></b><small><span class="ru">съёмки</span><span class="en">shoots</span></small></div><p><span class="ru">Художественная фотосъёмка. Победила в номинации «Фотография» всероссийского конкурса «Шаг вперёд».</span><span class="en">Art photography. Won the Photography category of the national Step Forward contest.</span></p></li>
+  </ol>
+  <button class="more-btn exp-more" id="expmore"><span class="ru">Показать весь опыт</span><span class="en">Show all experience</span> <svg class="ic dn" aria-hidden="true"><use href="#i-ar"/></svg></button>
+
+  <div class="tools">
+    <div class="eyebrow"><span class="ru">Дружу с</span><span class="en">Tools I use</span></div>
+    <div class="chips"><span>Figma</span><span>Photoshop</span><span>Lightroom</span><span>Premiere Pro</span><span>Canva</span><span>PowerPoint</span><span>MS Word</span><span><span class="ru">Сервисы Google</span><span class="en">Google Workspace</span></span></div>
+  </div>
+
+  <div class="more">
+    <div class="eyebrow"><span class="ru">Ещё обо мне</span><span class="en">A bit more</span></div>
+    <div class="cards">
+      <div><span class="big"><span class="ru">4 млн ₽</span><span class="en">₽4M</span></span><p><span class="ru">В 16 лет выиграла грант Baret Scholars на кругосветное путешествие с параллельной учёбой.</span><span class="en">At 16 I won a Baret Scholars grant for a round-the-world trip with study along the way.</span></p></div>
+      <div><span class="big"><span class="ru">книга в 16</span><span class="en">a book at 16</span></span><p><span class="ru">В детстве много читала и писала, а в 16 сделала свою книгу с прозой и рассказами о мрачноте мира.</span><span class="en">I read and wrote a lot growing up, and at 16 I made my own book of prose and dark short stories.</span></p></div>
+      <div><span class="big">PT → RU</span><p><span class="ru">Перевела полнометражный фильм с нишевого португальского диалекта, не зная его. Получила благодарность 11-го МКФ «Ноль Плюс».</span><span class="en">Translated a feature film from a niche Portuguese dialect I didn’t know. Thanked by the 11th Nol Plus International Film Festival.</span></p></div>
+      <div><span class="big">Aa</span><p><span class="ru">Люблю придумывать шрифты и создавать их с нуля.</span><span class="en">I love inventing typefaces and building them from scratch.</span></p></div>
+      <div><span class="big">24 fps</span><p><span class="ru">Делаю анимацию: прикладную, снятую на камеру, и монтажную. Вела мастер-классы по анимации.</span><span class="en">I make animation, both camera-shot and edited, and have taught animation workshops.</span></p></div>
+      <div><span class="big">EN</span><p><span class="ru">Преподавала английский, и все мои программы и наработки остались со мной.</span><span class="en">I’ve taught English and still have all my programmes and materials.</span></p></div>
+    </div>
+  </div>
+
+  <div class="awards-wrap">
+    <div class="eyebrow"><span class="ru">Награды и сертификаты</span><span class="en">Awards &amp; certificates</span></div>
+    <ul class="awards">
+      <li><span class="tag"><span class="ru">Гран-при</span><span class="en">Grand Prix</span></span><p><span class="ru">Гран-при и победа в номинации «Визитная карточка» первого областного медиафорума «Медиамир» от Лиги юных журналистов.</span><span class="en">Grand Prix and the “Calling Card” category at the first regional Mediamir media forum by the Young Journalists League.</span></p></li>
+      <li><span class="tag"><span class="ru">1 место</span><span class="en">1st place</span></span><p><span class="ru">Диплом победителя всероссийского конкурса «Шаг вперёд», тур «Творчество», номинация «Фотография».</span><span class="en">Winner’s diploma, national Step Forward contest, Creativity round, Photography category.</span></p></li>
+      <li><span class="tag"><span class="ru">Лучший участник</span><span class="en">Top participant</span></span><p><span class="ru">Грамота лучшего участника трека «Медиа» всероссийской образовательной мастерской «Точка».</span><span class="en">Best participant of the Media track at the national Tochka workshop.</span></p></li>
+      <li><span class="tag"><span class="ru">Благодарность</span><span class="en">Recognition</span></span><p><span class="ru">За перевод полнометражного фильма для 11-го международного кинофестиваля «Ноль Плюс».</span><span class="en">For translating a feature film for the 11th Nol Plus International Film Festival.</span></p></li>
+      <li class="extra"><span class="tag"><span class="ru">Благодарность</span><span class="en">Recognition</span></span><p><span class="ru">От МБУК «Новомосковская библиотечная система» за мероприятия: арт-терапия, «Библионочь», мастер-классы.</span><span class="en">From the Novomoskovsk Library System for events: art therapy, Library Night, workshops.</span></p></li>
+      <li class="extra"><span class="tag"><span class="ru">Благодарность</span><span class="en">Recognition</span></span><p><span class="ru">Участнику команды СМИ в лагерях «Золотой листок» и «Содружество: трансформация».</span><span class="en">Media team member at the Golden Leaf and Commonwealth: Transformation camps.</span></p></li>
+      <li class="extra"><span class="tag"><span class="ru">Курсы</span><span class="en">Courses</span></span><p><span class="ru">«Синергия»: публичные выступления, русский язык и деловое общение, основы графического дизайна.</span><span class="en">Synergy: public speaking, Russian and business communication, graphic design basics.</span></p></li>
+      <li class="extra"><span class="tag"><span class="ru">Курсы</span><span class="en">Courses</span></span><p><span class="ru">«Экологическая журналистика: просто о сложном» (грант Росмолодёжи), видеокурс «Семейное видеотворчество», марафон по инфографике для маркетплейсов Дмитрия Сугака.</span><span class="en">Environmental Journalism (Rosmolodezh grant), a family video-making course, and Dmitry Sugak’s marketplace infographics marathon.</span></p></li>
+      <li class="extra"><span class="tag"><span class="ru">Сертификат</span><span class="en">Certificate</span></span><p><span class="ru">Участие во всероссийской культурно-просветительской акции «Культурный марафон».</span><span class="en">Participation in the national Cultural Marathon.</span></p></li>
+    </ul>
+    <button class="more-btn" id="awmore"><span class="ru">Показать все 9</span><span class="en">Show all 9</span> <svg class="ic dn" aria-hidden="true"><use href="#i-ar"/></svg></button>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow"><span class="ru">Контакты</span><span class="en">Contact</span></div>
+    <h2><span class="ru">Давайте <span class="serif">сделаем</span><br>что-то красивое</span><span class="en">Let’s <span class="serif">make</span><br>something lovely</span></h2>
+    <div class="mail">
+      <a href="mailto:lilsisdar@gmail.com" id="mail">lilsisdar@gmail.com</a>
+      <button class="copy" id="copy"><span class="ru">Скопировать</span><span class="en">Copy</span></button>
+    </div>
+    <div class="socials">
+      <a href="https://t.me/littlebodybigheartd" target="_blank" rel="noopener"><span><small>Telegram</small><b>@littlebodybigheartd</b></span><span class="ar"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></a>
+      <a href="https://instagram.com/banjosquirrell" target="_blank" rel="noopener"><span><small>Instagram</small><b>@banjosquirrell</b></span><span class="ar"><svg class="ic ne" aria-hidden="true"><use href="#i-ar"/></svg></span></a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 <span class="ru">Дарья · графический дизайн</span><span class="en">Darya · graphic design</span></span><span class="clock"><span class="ru">Новомосковск</span><span class="en">Novomoskovsk</span> · <span id="clock">--:--</span> MSK</span><a href="#top"><span class="ru">Наверх</span><span class="en">Back to top</span> <svg class="ic up" aria-hidden="true"><use href="#i-ar"/></svg></a></div></footer>
+<div class="cur" id="cur" aria-hidden="true"><span id="curt"></span></div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Просмотр работы">
+  <div class="fig"><img id="lbimg" alt=""></div>
+  <div class="meta2" id="lbmeta"></div>
+  <button class="x" id="lbx" aria-label="Закрыть"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="l" id="lbl" aria-label="Назад"><svg class="ic lf" aria-hidden="true"><use href="#i-ar"/></svg></button>
+  <button class="r" id="lbr" aria-label="Вперёд"><svg class="ic" aria-hidden="true"><use href="#i-ar"/></svg></button>
+</div>
+
+<script>
+/* Everything readable is already in the HTML; this script only adds the extras
+   (lightbox, marquee, slide counter, dots). File previewers that block JS still show the full page. */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const src=f=>{const i=document.querySelector(`.work[data-f="${f}"] img`);return i?(i.currentSrc||i.src):''};
+const W={
+ pony:{ru:['Pink Pony Club','Музыкальный постер'],en:['Pink Pony Club','Music poster']},
+ vicious:{ru:['Vicious','Музыкальный постер'],en:['Vicious','Music poster']},
+ weird:{ru:['You’re being weird','Типографический постер'],en:['You’re being weird','Type poster']},
+ dolly:{ru:['This old one day','Музыкальный постер'],en:['This old one day','Music poster']},
+ nightmime:{ru:['Night mime','Музыкальный постер'],en:['Night mime','Music poster']},
+ kopeyka:{ru:['«Копейка»','Реклама приложения, сторис'],en:['Kopeyka','App ad, stories']},
+ sicilia:{ru:['«Сицилия»','Баннер подарочного сертификата'],en:['Sicilia','Gift card banner']},
+ fvb:{ru:['FVB','Промо-пост с промокодом'],en:['FVB','Promo post with a code']},
+ matras:{ru:['Ортопедический матрас','Рекламный постер'],en:['Orthopedic mattress','Product ad']},
+ cult:{ru:['Is this a cult?','Коллаж'],en:['Is this a cult?','Collage']},
+ love:{ru:['So this is love','Коллаж'],en:['So this is love','Collage']},
+ lost:{ru:['Потерянный взгляд в толпе','Иллюстрированный постер'],en:['Lost in the crowd','Illustrated poster']},
+ close:{ru:['Закрой его','Иллюстрированный постер'],en:['Shut it in','Illustrated poster']},
+ flaff:{ru:['«Флафф»','Логотип магазина матрасов'],en:['Flaff','Mattress store logo']},
+ rw:{ru:['RW piercing','Логотип пирсинг-студии'],en:['RW piercing','Piercing studio logo']}
+};
+const ALL=$$('.work').map(b=>b.dataset.f);
+const STRIP=['pony','kopeyka','cult','flaff','vicious','matras','lost','rw','weird','fvb','love','sicilia','close','dolly','nightmime'];
+let lang='ru',lbi=0,deck='rm';
+const pad2=n=>String(n).padStart(2,'0');
+
+/* index of the child nearest to the scroll start of a horizontal scroller */
+function nearest(g){const items=[...g.children];if(!items.length)return 0;
+  if(g.scrollLeft+g.clientWidth>=g.scrollWidth-4)return items.length-1;
+  const p=parseFloat(getComputedStyle(g).paddingLeft)||0;let k=0,best=1e9;
+  items.forEach((el,i)=>{const d=Math.abs(el.offsetLeft-g.offsetLeft-p-g.scrollLeft);if(d<best){best=d;k=i}});return k;}
+function scrollToChild(g,k){const el=g.children[k];if(!el)return;const p=parseFloat(getComputedStyle(g).paddingLeft)||0;
+  g.scrollTo({left:el.offsetLeft-g.offsetLeft-p,behavior:'smooth'});}
+
+/* gallery dots */
+$$('.gal').forEach(g=>{const d=document.createElement('div');d.className='dots';d.setAttribute('aria-hidden','true');
+  d.innerHTML=[...g.children].map((_,i)=>`<i${i?'':' class="on"'}></i>`).join('');g.after(d);
+  g.addEventListener('scroll',()=>{const k=nearest(g);[...d.children].forEach((x,i)=>x.classList.toggle('on',i===k))},{passive:true});});
+
+/* hero marquee, built from the gallery images already on the page */
+(function(){const one=STRIP.map(f=>`<button data-f="${f}" aria-label="${W[f].ru[0]}"><img src="${src(f)}" alt=""></button>`).join('');
+  $('#strip').innerHTML=one+one.replace(/<button /g,'<button tabindex="-1" aria-hidden="true" ');})();
+
+/* lightbox */
+document.addEventListener('click',e=>{const b=e.target.closest('.work,.strip button');if(b)openLb(ALL.indexOf(b.dataset.f))});
+function openLb(i){lbi=(i+ALL.length)%ALL.length;const f=ALL[lbi];
+  $('#lbimg').src=src(f);$('#lbimg').alt=W[f][lang][0];
+  $('#lbmeta').innerHTML=`${W[f][lang][0]}<small>${W[f][lang][1]} · ${lbi+1} / ${ALL.length}</small>`;
+  $('#lb').hidden=false;document.documentElement.style.overflow='hidden';document.body.style.overflow='hidden';}
+function closeLb(){$('#lb').hidden=true;document.documentElement.style.overflow='';document.body.style.overflow='';}
+$('#lbx').onclick=closeLb;$('#lbl').onclick=()=>openLb(lbi-1);$('#lbr').onclick=()=>openLb(lbi+1);
+$('#lb').addEventListener('click',e=>{if(e.target.id==='lb'||e.target.classList.contains('fig'))closeLb()});
+let tx=null;$('#lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+$('#lb').addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)openLb(lbi+(d<0?1:-1));tx=null});
+
+/* slide decks: native swipe, arrows and counter on top */
+const track=()=>document.getElementById('track-'+deck);
+function syncDeck(){const t=track(),n=t.children.length,k=nearest(t);
+  $('#dcount').textContent=pad2(k+1)+' / '+pad2(n);$('#prog').style.width=((k+1)/n*100)+'%';return k;}
+function go(dir){const t=track(),n=t.children.length;scrollToChild(t,(nearest(t)+dir+n)%n);}
+$$('.slides').forEach(t=>t.addEventListener('scroll',()=>{if(t===track())syncDeck()},{passive:true}));
+$$('.dk').forEach(r=>r.addEventListener('change',()=>{deck=r.value;syncDeck()}));
+$('#sp').onclick=()=>go(-1);$('#sn').onclick=()=>go(1);
+document.addEventListener('keydown',e=>{
+  if(!$('#lb').hidden){if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')openLb(lbi-1);if(e.key==='ArrowRight')openLb(lbi+1);return;}
+  if(e.target.closest('input,textarea'))return;
+  const r=$('.stage').getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0){if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1);}
+});
+
+$('#copy').onclick=async()=>{const b=$('#copy'),t='lilsisdar@gmail.com';
+  const done=()=>{b.textContent=lang==='ru'?'Скопировано':'Copied';setTimeout(()=>b.innerHTML='<span class="ru">Скопировать</span><span class="en">Copy</span>',1800)};
+  try{await navigator.clipboard.writeText(t);done()}catch(e){const r=document.createRange();r.selectNodeContents($('#mail'));const s=getSelection();s.removeAllRanges();s.addRange(r);}
+};
+
+/* custom cursor (mouse only) */
+const cur=$('#cur'),curt=$('#curt');let mx=0,my=0,cx=0,cy=0;
+if(matchMedia('(pointer:fine)').matches){
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.classList.add('on')});
+  document.addEventListener('mouseleave',()=>cur.classList.remove('on'));
+  document.addEventListener('mouseover',e=>{
+    const t=e.target.closest('.work,.strip button,.slides');
+    if(t){cur.classList.add('big');curt.textContent=t.classList.contains('slides')?(lang==='ru'?'Листать':'Swipe'):(lang==='ru'?'Смотреть':'View')}else cur.classList.remove('big');
+  });
+  $$('.slides').forEach(t=>t.addEventListener('click',e=>{const r=t.getBoundingClientRect();go(e.clientX-r.left<r.width/2?-1:1)}));
+  (function loop(){cx+=(mx-cx)*.22;cy+=(my-cy)*.22;cur.style.transform=`translate3d(${cx}px,${cy}px,0)`;requestAnimationFrame(loop)})();
+}
+/* scroll progress */
+const nav=$('.nav');addEventListener('scroll',()=>{const h=document.documentElement;nav.style.setProperty('--p',(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%')},{passive:true});
+/* clock */
+function tick(){try{$('#clock').textContent=new Intl.DateTimeFormat('ru-RU',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Moscow'}).format(new Date())}catch(e){}}
+tick();setInterval(tick,20000);
+
+/* mobile menu (a <details>, so it also opens without JS) */
+const menu=$('#menu');
+$('#mnav').addEventListener('click',e=>{if(e.target.closest('a'))menu.open=false});
+document.addEventListener('click',e=>{if(menu.open&&!e.target.closest('#menu'))menu.open=false});
+$('#expmore').onclick=()=>{$('.exp').classList.add('all');$('#expmore').hidden=true};
+$('#awmore').onclick=()=>{$('.awards').classList.add('all');$('#awmore').hidden=true};
+$$('.services a').forEach(a=>a.addEventListener('click',()=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;t.classList.remove('flash');void t.offsetWidth;t.classList.add('flash')}));
+
+function setLang(l){lang=l;document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
+  const r=document.getElementById('lang-'+l);if(r)r.checked=true;
+  try{localStorage.setItem('lang',l)}catch(e){}}
+$$('.lang input').forEach(i=>i.addEventListener('change',()=>setLang(i.value)));
+let saved='ru';try{saved=localStorage.getItem('lang')||'ru'}catch(e){}
+setLang(saved==='en'?'en':'ru');syncDeck();
+</script>
+
+</body>
+</html>
